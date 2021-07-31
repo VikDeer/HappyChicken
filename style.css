@@ -1,0 +1,212 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url(files/background.png);
+}
+
+header {
+	display: flex;
+	gap: 15px;
+	background-color: rgba(213, 195, 159, 0.75);
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+
+	font-family: 'Staatliches', cursive;
+}
+
+.main {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	gap: 20px;
+}
+
+.field {
+	width: 75%;
+	height: 500px;
+	background-color: rgba(47, 183, 255, 0.7);/*#2fb7ff*/
+	/*этот тоже прикольный не знаю rgba(43, 156, 255, 0.7)*/ 
+	border: 10px solid #AB905C;
+	border-radius: 20px;
+
+	position: relative;
+}
+
+.score {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+
+	font-size: 20px;
+	font-weight: bold;
+
+	background-color: rgba(43, 156, 255, 0.7);
+	border: 5px solid #AB905C;
+	border-radius: 10px;
+	padding: 10px;
+	padding-left: 50px;
+
+	background-image: url(img/EGG.png);
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: 1% 50%;
+}
+
+.chicken {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	background-color: transparent;
+	border: none;
+
+	width: 150px;
+	height: 150px;
+	background-image: url(img/BIRD.png);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 150px 150px;
+
+	cursor: pointer;
+}
+.chicken:active {
+	background-image: url(img/EGG.png), url(img/BIRDONJUMP.png);
+	background-position: 50% 100%, 50% 50%;
+	background-size: 50px 50px, 150px 150px;
+}
+
+.chicken div {
+	width: 150px;
+	height: 150px;
+	position: relative;
+}
+
+.chicken div::after {
+	position: absolute;
+	left: 47%; top: 50%;
+	transform: translate(-50%, -50%);
+
+	content: "Нажми!";
+	color: #ff0039;
+	font-weight: 1000;
+
+	animation-name: clickText;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes clickText {
+	from {
+		font-size: 17px;
+	}
+
+	75% {
+		font-size: 20px;
+	}
+
+	to {
+		font-size: 17px;
+	}
+}
+
+.chicken:hover div::after {
+	display: none;
+}
+
+.improve {
+	width: 40%;
+	height: 100%;
+	text-align: center;
+
+	background-color: rgba(47, 183, 255, 0.7); /*#2fb7ff*/
+	border: 10px solid #AB905C;
+	border-radius: 20px;
+}
+
+.improve p {
+	margin-top: 40px;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.improve-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.improve-list button {
+	background-color: #FFE366;
+	border: 2px solid #A6A60F;
+	background-image: url(img/BIRD.png);
+	background-repeat: no-repeat;
+	background-size: 40px 40px;
+	background-position: 99% 50%;
+
+	padding: 20px;
+	padding-right: 50px;
+	margin-bottom: 10px;
+
+	font-size: 17px;
+}
+
+.improve-list button:hover {
+	background-color: #FFDA33;
+}
+
+.improve-list button:active {
+	background-color: #FFEB8F;
+	background-image: url(img/BIRDONJUMP.png);
+}
+
+.improve-list button span {
+	font-size: 12px;
+}
+
+.chick {
+	width: 70px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-size: 70px 70px;
+	background-position: 0 0;
+
+	animation-name: jump;
+	animation-duration: 0.8s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes jump {
+	from {
+	background-image: url(img/BIRD.png);		
+	}
+
+	75% {
+		background-image: url(img/BIRDONJUMP.png);
+		transform: translateY(-10px);
+	}
+
+	to {
+		background-image: url(img/BIRD.png);
+		transform: translateY(0px);
+	}
+}
+
+.first-chick {
+	position: absolute;
+	left: 10%; top: 70%;
+}
+.second-chick {
+	position: absolute;
+	right: 20%; top: 40%;
+}
+.third-chick {
+	position: absolute;
+	left: 30%; top: 20%;
+	transform: scale(-1, 1);
+}

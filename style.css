@@ -126,28 +126,82 @@ header {
 	background-color: rgba(47, 183, 255, 0.7); /*#2fb7ff*/
 	border: 10px solid #AB905C;
 	border-radius: 20px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
 }
 
-.improve p {
-	margin-top: 40px;
+.improve b {
 	font-size: 24px;
 	font-weight: bold;
 	text-decoration: underline;
 }
 
-.improve-list {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.improve .improve-info {
+	width: 50%;
+	height: 20%;
+
+	background-color: rgba(255, 255, 255, 0.4);
+	border: 3px solid #AB905C;
+	border-radius: 3px;
+
+	padding: 15px;
+	padding-top: 5px;
+	padding-bottom: 25px;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 10px;
 }
 
-.improve-list button {
+.improve .improve-info .title {
+	display: block;
+	width: 100%;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.improve .improve-info .level {
+	margin-right: auto;
+	font-size: 14px;
+}
+
+.improve .improve-info .price {
+	margin-left: auto;
+	font-size: 14px;
+}
+
+.improve .improve-info .buy {
+	display: inline-block;
+	width: 100%;
+	padding: 10px 0;
+	font-size: 15px;
+
 	background-color: #FFE366;
 	border: 2px solid #A6A60F;
-	background-image: url(img/BIRD.png);
+
+	background-image: url(img/BIRD.png), url(img/BIRD.png);
 	background-repeat: no-repeat;
 	background-size: 40px 40px;
-	background-position: 99% 50%;
+	background-position: 5% 50%, 95% 50%;
+}
+
+.improve .improve-info .buy:hover {
+	background-color: #FFDA33;
+}
+
+.improve .improve-info .buy:active {
+	background-color: #FFEB8F;
+	background-image: url(img/BIRDONJUMP.png), url(img/BIRDONJUMP.png);
+}
+
+/*.improve-list button {
+	background-color: #FFE366;
+	border: 2px solid #A6A60F;
 
 	padding: 20px;
 	padding-right: 50px;
@@ -163,11 +217,9 @@ header {
 .improve-list button:active {
 	background-color: #FFEB8F;
 	background-image: url(img/BIRDONJUMP.png);
-}
+}*/
 
-.improve-list button span {
-	font-size: 12px;
-}
+/*прыгающие на фоне*/
 
 .chick {
 	width: 70px;

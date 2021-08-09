@@ -2,7 +2,7 @@
 let clicker = document.querySelector ('.chicken');
 let eggs = document.querySelector('.score-number');
 let eggsNumber = eggs.dataset.number;
-eggsNumber = 10000;
+eggsNumber = 0;
 
 		/*улучшения клика*/
 let clickLVL = document.querySelector('.click-level');

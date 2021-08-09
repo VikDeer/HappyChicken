@@ -27,7 +27,7 @@
 			<div></div>
 		</button>
 
-		<span class="score">Количество яиц: 0</span>
+		<span class="score">Количество яиц: <span class="score-number">0</span></span>
 
 		<div class="first-chick">
 			<div class="chick"></div>
@@ -42,18 +42,25 @@
 	</div>
 
 	<div class="improve">
-		<p>Доступные улучшения:</p>
-		<ul class="improve-list">
-			<li>
-				<button class="passive">Пассивный прирост яиц <span>[0 яиц]</span></button>
-			</li>
-			<li>
-				<button class="click">Количество яиц за клик <span>[0 яиц]</span></button>
-			</li>
-		</ul>
+		<b>Доступные улучшения:</b>
+		<div class="improve-info click">
+			<span class="title">Количество за клик</span>
+			<span class="level">Уровень: <span class="click-level">1</span>
+				<br> +<span class="click-info" data-number="1">1</span> за клик</span>
+			<span class="price">Стоимость: <br> <span class="click-price">100</span> яиц</span>
+			<button class="buy click-buy">Купить</button>
+		</div>
+		<div class="improve-info passive">
+			<span class="title">Яйцемёт</span>
+			<span class="level">Уровень: <span class="passive-level">0</span>
+				<br> +<span class="passive-info">0</span> в 3 сек</span>
+			<span class="price">Стоимость: <br> <span class="passive-price">1500</span> яиц</span>
+			<button class="buy passive-buy">Купить</button>
+		</div>
 	</div>
 
 </div>
 
+<script src="script.js" type="text/javascript"></script>
 </body>
 </html>

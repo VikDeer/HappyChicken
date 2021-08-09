@@ -1,3 +1,4 @@
+(function(){
 		/*главные элементы*/
 let clicker = document.querySelector ('.chicken');
 let eggs = document.querySelector('.score-number');
@@ -77,3 +78,4 @@ clicker.onclick = function() {
 	eggsNumber = eggsNumber + +clickInfoData;
 	eggs.textContent = eggsNumber;
 };
+})()

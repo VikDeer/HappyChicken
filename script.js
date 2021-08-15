@@ -82,8 +82,6 @@ let unloadButton = document.querySelector('.unload');
 
 saveButton.onclick = function() {
 	localStorage.setItem('eggs', eggsNumber);
-
-	console.log(localStorage);
 };
 
 deleteButton.onclick = function() {
@@ -92,8 +90,6 @@ deleteButton.onclick = function() {
 	localStorage.setItem('clickPrice', clickPriceData);
 	localStorage.setItem('passiveLVL', passiveLVLData);
 	localStorage.setItem('passivePrice', passivePriceData);
-	
-	console.log(localStorage);
 };
 
 unloadButton.onclick = function() {

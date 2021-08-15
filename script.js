@@ -21,6 +21,7 @@ let passiveLVL = document.querySelector('.passive-level');
 passiveLVLData = passiveLVL.dataset.number = 0;
 
 let passiveInfo = document.querySelector('.passive-info');
+let passiveInfoData = passiveInfo.dataset.number = 0;
 
 let passivePrice = document.querySelector('.passive-price');
 passivePriceData = passivePrice.dataset.number = 1500;
@@ -51,7 +52,8 @@ passiveBuy.onclick = function() {
 		passiveLVLData++;
 		passiveLVL.textContent = passiveLVLData;
 
-		passiveInfo.textContent = passiveLVLData;
+		passiveInfoData = passiveInfoData + 2;
+		passiveInfo.textContent = passiveInfoData;
 
 		eggsNumber = eggsNumber - passivePriceData;
 		eggs.textContent = eggsNumber;
@@ -64,7 +66,7 @@ passiveBuy.onclick = function() {
 };
 
 let passiveIncrease = function() {
-	eggsNumber = eggsNumber + passiveLVLData;
+	eggsNumber = eggsNumber + passiveInfoData;
 	eggs.textContent = eggsNumber;
 };
 setInterval(passiveIncrease, 1000);

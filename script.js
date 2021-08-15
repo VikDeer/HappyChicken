@@ -82,14 +82,18 @@ let unloadButton = document.querySelector('.unload');
 
 saveButton.onclick = function() {
 	localStorage.setItem('eggs', eggsNumber);
-};
-
-deleteButton.onclick = function() {
-	localStorage.clear();
 	localStorage.setItem('clickLVL', clickLVLData);
 	localStorage.setItem('clickPrice', clickPriceData);
 	localStorage.setItem('passiveLVL', passiveLVLData);
 	localStorage.setItem('passivePrice', passivePriceData);
+};
+
+deleteButton.onclick = function() {
+	localStorage.clear();
+	localStorage.setItem('clickLVL', 1);
+	localStorage.setItem('clickPrice', 100);
+	localStorage.setItem('passiveLVL', 0);
+	localStorage.setItem('passivePrice', 1500);
 };
 
 unloadButton.onclick = function() {

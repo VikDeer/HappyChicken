@@ -41,7 +41,7 @@ clickBuy.onclick = function() {
 		eggsNumber = eggsNumber - clickPriceData;
 		eggs.textContent = eggsNumber;
 
-		clickPriceData = clickPriceData + 100;
+		clickPriceData = clickPriceData + (100 * clickLVLData);
 		clickPrice.textContent = clickPriceData;
 	} else {
 		alert('Недостаточно яиц!');
@@ -60,7 +60,7 @@ passiveBuy.onclick = function() {
 		eggsNumber = eggsNumber - passivePriceData;
 		eggs.textContent = eggsNumber;
 
-		passivePriceData = passivePriceData + 500;
+		passivePriceData = passivePriceData + 500 + (100 * passiveLVLData);
 		passivePrice.textContent = passivePriceData;
 	} else {
 		alert('Недостаточно яиц!');
@@ -71,7 +71,7 @@ let passiveIncrease = function() {
 	eggsNumber = eggsNumber + passiveInfoData;
 	eggs.textContent = eggsNumber;
 };
-setInterval(passiveIncrease, 3000);
+setInterval(passiveIncrease, 1000);
 
 
 clicker.onclick = function() {
